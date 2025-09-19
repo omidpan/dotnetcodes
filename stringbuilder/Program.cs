@@ -21,13 +21,19 @@ namespace stringbuilder
         {
             string result = "";
             var start1 = DateTime.Now;
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 result += i.ToString() + " ";  // Each loop creates a new string!
             }
             var end1 = DateTime.Now;
-            Console.WriteLine("String time: " + (end1 - start1).TotalMilliseconds);
+
             Console.WriteLine(result);
+            Console.WriteLine("String time: " + (end1 - start1).TotalMilliseconds);
+
+
+
+
+
             /******************** 
              StringBuilder (in System.Text) is a mutable string class.
              It allows you to modify text in place (append, insert, remove, replace) 
@@ -43,7 +49,7 @@ namespace stringbuilder
             sb.Replace("World", "Universe");
             sb.Remove(6, 6);  // Remove 6 chars from index 6(remove " Univer")
 
-            Console.WriteLine(sb.ToString()); // Output: C# Universe!
+            Console.WriteLine(sb);
 
             sb.Clear(); // Clear all content.
             Console.WriteLine("After Clear: '" + sb.ToString() + "'");
@@ -51,11 +57,11 @@ namespace stringbuilder
              * Let's compare the time taken by StringBuilder vs string concatenation in a loop.
              */
             var start2 = DateTime.Now;
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 100000; i++)
                 sb.Append(i);
             var end2 = DateTime.Now;
             Console.WriteLine("StringBuilder time: " + (end2 - start2).TotalMilliseconds);
-            Console.WriteLine(result.ToString());
+            Console.WriteLine(sb.ToString());
         }
     }
 }
