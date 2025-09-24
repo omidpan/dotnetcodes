@@ -18,7 +18,7 @@ namespace encryption_intro
             int numberOfShifts = 23;
             //Convert letterToInteger
             int x = 'Z' - 'A';
-            //The modulo ensures the shifted value wraps around the alphabet.(we have 26 letters in the alphabet)
+            ////The modulo ensures the shifted value wraps around the alphabet.(we have 26 letters in the alphabet)
             int encrypted = (x + numberOfShifts) % 26;
             Console.WriteLine("Encrypted value: " + encrypted);
             char encryptedChar = (char)(encrypted + 'A');
