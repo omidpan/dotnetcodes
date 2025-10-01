@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stringbuilder", "stringbuil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "method-parameters", "method-parameters\method-parameters.csproj", "{FA45975F-280F-451F-B925-1129CE2E4450}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fieldsAndProperties", "fieldsAndProperties\fieldsAndProperties.csproj", "{0DA033EA-D3E9-476E-8532-2289450973A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FA45975F-280F-451F-B925-1129CE2E4450}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA45975F-280F-451F-B925-1129CE2E4450}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA45975F-280F-451F-B925-1129CE2E4450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DA033EA-D3E9-476E-8532-2289450973A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA033EA-D3E9-476E-8532-2289450973A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA033EA-D3E9-476E-8532-2289450973A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA033EA-D3E9-476E-8532-2289450973A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
