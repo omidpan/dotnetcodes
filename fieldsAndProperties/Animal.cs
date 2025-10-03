@@ -8,7 +8,7 @@ namespace fieldsAndProperties
 {
     public class Animal
     {
-        public string Name { get; set; } // field with get and set accessors
+        public string Name { set; get; } // field with get and set accessors
         internal static int animalCount = 0; // static field
 
         public Animal()
