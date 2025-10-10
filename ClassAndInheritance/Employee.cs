@@ -16,7 +16,7 @@ namespace ClassAndInheritance
         // Constructor
         public Employee(int id, string name, double salary)
         {
-            Id = id;
+            this.Id = id;
             Name = name;
             Salary = salary;
         }

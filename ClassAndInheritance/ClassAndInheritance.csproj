@@ -44,9 +44,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClass.cs" />
+    <Compile Include="BaseClassImpl.cs" />
+    <Compile Include="DerivedClass2.cs" />
     <Compile Include="DerivedClass.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="ImplementationClass.cs" />
+    <Compile Include="ISampleInterface.cs" />
     <Compile Include="Manager.cs" />
+    <Compile Include="PartialEmployee.cs" />
+    <Compile Include="PartialEmployee3.cs" />
+    <Compile Include="PartialEmployee2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shape.cs" />

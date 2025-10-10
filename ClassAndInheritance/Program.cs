@@ -32,6 +32,28 @@ namespace ClassAndInheritance
             //Override abstract method
             var sq = new Square();
             Console.WriteLine($"Side of the square = {sq.Side}");
+
+
+
+            //Using partial Class and method
+
+            PartialEmployee employee = new PartialEmployee(110, "Leo", "James");
+            Console.WriteLine($"EmpID: {employee.EmpID}, FirstName: {employee.FirstName} , LastName: {employee.LastName}");
+
+
+            //Declare an interface instance.
+            ImplementationClass obj = new ImplementationClass();
+
+            //Call the member
+            obj.FirstMethod();
+
+            //SecondMethod is not available to obj because it was not declared as an instance of the interface.
+
+            //Let's try a second object that is an instance of the interface
+            ISampleInterface obj2 = new ImplementationClass();
+            obj2.FirstMethod();
+            obj2.SecondMethod();
+
         }
     }
 }
