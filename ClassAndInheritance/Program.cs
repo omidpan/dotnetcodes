@@ -54,6 +54,7 @@ namespace ClassAndInheritance
             obj2.FirstMethod();
             obj2.SecondMethod();
 
+
         }
     }
 }
