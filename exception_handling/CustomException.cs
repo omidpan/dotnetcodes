@@ -13,7 +13,8 @@ namespace CustomExcExample
 
         public CustomException() { }
 
-        public CustomException(string message, string cause, DateTime time)
+        public CustomException(string message, string cause, DateTime time,Exception inner):
+            base(message,inner)
         {
             messageDetails = message;
             CauseOfError = cause;
