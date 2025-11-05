@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "method_extention_assembly",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exception_handling", "exception_handling\exception_handling.csproj", "{FE7F577A-F109-4D1F-9919-0DFB9C16D617}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "collections-and-reflections", "collections-and-reflections\collections-and-reflections.csproj", "{8B39CB74-B89A-4A23-958D-EEC97D056E08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "collections-generic-nongeneric", "collections-and-reflections\collections-generic-nongeneric.csproj", "{8B39CB74-B89A-4A23-958D-EEC97D056E08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

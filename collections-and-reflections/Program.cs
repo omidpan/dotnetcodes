@@ -133,95 +133,110 @@ namespace collections_and_reflections
 
             // Queue Example
 
-            Queue<string> customers = new Queue<string>();
+           // Queue<string> customers = new Queue<string>();
 
-            // Enqueue (add items)
-            customers.Enqueue("Alice");
-            customers.Enqueue("Bob");
-            customers.Enqueue("Charlie");
+           // // Enqueue (add items)
+           // customers.Enqueue("Alice");
+           // customers.Enqueue("Bob");
+           // customers.Enqueue("Charlie");
 
-            Console.WriteLine("First in line: " + customers.Peek());
+           // Console.WriteLine("First in line: " + customers.Peek());
 
-            // Dequeue (remove first item)
-            Console.WriteLine("Served: " + customers.Dequeue());
-            Console.WriteLine("Served: " + customers.Dequeue());
+           // // Dequeue (remove first item)
+           // Console.WriteLine("Served: " + customers.Dequeue());
+           // Console.WriteLine("Served: " + customers.Dequeue());
 
-            Console.WriteLine("\nRemaining in queue:");
-            foreach (string customer in customers)
-            {
-                Console.WriteLine(customer);
-            }
+           // Console.WriteLine("\nRemaining in queue:");
+           // foreach (string customer in customers)
+           // {
+           //     Console.WriteLine(customer);
+           // }
 
-            Console.WriteLine($"\nTotal waiting: {customers.Count}");
-
-
-            //No generic Queue
-
-            Queue q = new Queue();
-
-            // Enqueue (add items)
-            q.Enqueue("Alice");
-            q.Enqueue(42);
-            q.Enqueue(true);
-
-            Console.WriteLine("First item: " + q.Peek());
-
-            // Dequeue
-            Console.WriteLine("Removed: " + q.Dequeue());
-
-            Console.WriteLine("\nRemaining items:");
-            foreach (var item in q)
-            {
-                Console.WriteLine(item);
-            }
+           // Console.WriteLine($"\nTotal waiting: {customers.Count}");
 
 
-            //SortedList Example
-            // Create a SortedList with int keys and string values
-            SortedList<int, string> students = new SortedList<int, string>();
+           // //No generic Queue
 
-            // Add elements (keys are automatically sorted)
-            students.Add(3, "Alice");
-            students.Add(1, "David");
-            students.Add(2, "Sophia");
+           // Queue q = new Queue();
 
-            // Display all key-value pairs
-            Console.WriteLine("Student List (Sorted by Key):");
-            foreach (KeyValuePair<int, string> kvp in students)
-            {
-                Console.WriteLine($"ID: {kvp.Key}, Name: {kvp.Value}");
-            }
+           // // Enqueue (add items)
+           // q.Enqueue("Alice");
+           // q.Enqueue(42);
+           // q.Enqueue(true);
 
-            // Access by key
-            Console.WriteLine($"\nStudent with ID 2: {students[2]}");
+           // Console.WriteLine("First item: " + q.Peek());
 
-            // Remove an item
-            students.Remove(3);
+           // // Dequeue
+           // Console.WriteLine("Removed: " + q.Dequeue());
 
-            Console.WriteLine("\nAfter removing ID 3:");
-            foreach (var kvp in students)
-            {
-                Console.WriteLine($"ID: {kvp.Key}, Name: {kvp.Value}");
-            }
-
-            // Check if key exists
-            if (students.ContainsKey(1))
-                Console.WriteLine("\nKey 1 exists!");
-
-            //simple use of IEnumerable and IEnumerator with yield return
-            CountdownYieldMultiple countdown = new CountdownYieldMultiple();
-            foreach (int number in countdown)
-            {
-                Console.WriteLine(number);
-            }
+           // Console.WriteLine("\nRemaining items:");
+           // foreach (var item in q)
+           // {
+           //     Console.WriteLine(item);
+           // }
 
 
+           // //SortedList Example
+           // // Create a SortedList with int keys and string values
+           // SortedList<int, string> students = new SortedList<int, string>();
+
+           // // Add elements (keys are automatically sorted)
+           // students.Add(3, "Alice");
+           // students.Add(1, "David");
+           // students.Add(2, "Sophia");
+
+           // // Display all key-value pairs
+           // Console.WriteLine("Student List (Sorted by Key):");
+           // foreach (KeyValuePair<int, string> kvp in students)
+           // {
+           //     Console.WriteLine($"ID: {kvp.Key}, Name: {kvp.Value}");
+           // }
+
+           // // Access by key
+           // Console.WriteLine($"\nStudent with ID 2: {students[2]}");
+
+           // // Remove an item
+           // students.Remove(3);
+
+           // Console.WriteLine("\nAfter removing ID 3:");
+           // foreach (var kvp in students)
+           // {
+           //     Console.WriteLine($"ID: {kvp.Key}, Name: {kvp.Value}");
+           // }
+
+           // // Check if key exists
+           // if (students.ContainsKey(1))
+           //     Console.WriteLine("\nKey 1 exists!");
+
+           // //simple use of IEnumerable and IEnumerator with yield return
+           // CountdownYieldMultiple countdown = new CountdownYieldMultiple();
+           // foreach (int number in countdown)
+           // {
+           //     Console.WriteLine(number);
+           // }
+
+           // LinkedList<string> linkedList = new LinkedList<string>();
+           // linkedList.AddLast("First");
+           // linkedList.AddLast("Second");
+           // linkedList.AddLast("Third");
+           // // Iterate through the linked list
+           //linkedList.Remove("Second");
             //using Yield
             // Display powers of 2 up to the exponent of 8
-            foreach (int power in Power(2, 8))
+            foreach (int item in Power(2, 20))
             {
-                Console.WriteLine(power);
+                Console.Write(item);
+                Console.Write(", ");
             }
+            Console.WriteLine("Without Yield:");
+            Console.WriteLine(PowerWioutYield(2, 20));
+
+            //List<Book> bookList = new List<Book>();
+            //for (int i = 0;i<100;i++)
+            //{
+            //    Book book=BookFactory.CreateBook($"Book Title {i+1}", $"Author {i+1}",1990);
+            //    bookList.Add( book);
+            //}
 
         }
         // Iterator method using yield
@@ -235,6 +250,19 @@ namespace collections_and_reflections
                 yield return result;
             }
         }
+
+        public static int PowerWioutYield(int number, int exponent)
+        {
+            int result = 1;
+
+            for (int i = 0; i < exponent; i++)
+            {
+                result = result * number;
+                 
+            }
+            return result;
+        }
+
 
     }
 }
