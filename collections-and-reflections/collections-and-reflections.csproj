@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="BookCollection.cs" />
+    <Compile Include="BookFactory.cs" />
     <Compile Include="CountDownYieldMultiple.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
