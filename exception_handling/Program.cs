@@ -30,12 +30,12 @@ namespace exception_handling
                 // Close the file here, no matter what happened above.
             }
 
-            /**
-             * Uncomment to test custom Event Log exception logging
-             * 
-             * 
-             * 
-             * 
+            ///**
+            // * Uncomment to test custom Event Log exception logging
+            // * 
+            // * 
+            // * 
+            // * 
             try
             {
                 // Something that may fail
@@ -60,7 +60,7 @@ namespace exception_handling
                 Console.WriteLine("Exception logged to Event Viewer.");
 
             }
-             */
+             //*/
            
         }
     }
