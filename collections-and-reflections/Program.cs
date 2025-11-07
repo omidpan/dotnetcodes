@@ -208,19 +208,7 @@ namespace collections_and_reflections
            // if (students.ContainsKey(1))
            //     Console.WriteLine("\nKey 1 exists!");
 
-           // //simple use of IEnumerable and IEnumerator with yield return
-           // CountdownYieldMultiple countdown = new CountdownYieldMultiple();
-           // foreach (int number in countdown)
-           // {
-           //     Console.WriteLine(number);
-           // }
 
-           // LinkedList<string> linkedList = new LinkedList<string>();
-           // linkedList.AddLast("First");
-           // linkedList.AddLast("Second");
-           // linkedList.AddLast("Third");
-           // // Iterate through the linked list
-           //linkedList.Remove("Second");
             //using Yield
             // Display powers of 2 up to the exponent of 8
             foreach (int item in Power(2, 20))
@@ -230,6 +218,13 @@ namespace collections_and_reflections
             }
             Console.WriteLine("Without Yield:");
             Console.WriteLine(PowerWioutYield(2, 20));
+
+            //List<Book> bookList = new List<Book>();
+            //for (int i = 0;i<100;i++)
+            //{
+            //    Book book=BookFactory.CreateBook($"Book Title {i+1}", $"Author {i+1}",1990);
+            //    bookList.Add( book);
+            //}
 
             //List<Book> bookList = new List<Book>();
             //for (int i = 0;i<100;i++)
